@@ -27,15 +27,9 @@ au! BufWritePost $MYVIMRC call ReloadVimrc()
 " access system clipboard
 vmap '' :w !pbcopy<CR><CR>
 
-if has("nvim")
-  " change cursor in insert and normal mode
-  let &t_SI = "<Esc>[5 q"
-  let &t_EI = "<Esc>[3 q"
-else
-  " change cursor in insert and normal mode
-  let &t_SI = "\e[6 q"
-  let &t_EI = "\e[2 q"
-endif
+" change cursor in insert and normal mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 " Return to last edit position when opening files
 autocmd BufReadPost *
@@ -110,15 +104,5 @@ set secure
 set foldmethod=indent
 set nofoldenable
 
-" set termguicolors
-" let g:sneak#label = 1
-
-" change font in gui mode
-if has('gui_running')
-  set guifont=Hack\ Nerd\ Font:h20
-endif
-
-set ssop-=options    " do not store global and local values in a session
-set ssop-=folds      " do not store folds
-set ssop-=curdir
-set ssop+=sesdir
+syntax on
+colorscheme monokai
