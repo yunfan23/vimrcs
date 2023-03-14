@@ -88,16 +88,15 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set clipboard+=unnamedplus              " Copy paste between vim and everything else
 set t_Co=256
 set textwidth=79
-" set colorcolumn=+1                      " highlight column after textwidth
 
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-let g:rainbow_active=1
 
 " disable auto insert commenter
 au BufEnter * set fo-=c fo-=r fo-=o fo-=t
 " auto remove training space
 autocmd BufWritePre * %s/\s\+$//e
+
 " Allows directory/project specific vimrc
 set exrc
 set secure
