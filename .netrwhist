@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/yunfan/.vim'
 let g:netrw_dirhist_2='/home/yunfan/miniconda3/envs/progran'
 let g:netrw_dirhist_1='/home/yunfan/.vim'
